@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foundation demo</title>
+<link rel="stylesheet" href="css/foundation.min.css">
+<link rel="stylesheet" href="foundation-icons/foundation-icons.css">
+<link rel="stylesheet" href="css/app.css">
+
+</head>
+<body>
+
+
+
+
+<h2>X Y Gird</h2>
+<div class="grid-container">
+	<div class="grid-x">
+		<div class="cell">full width cell</div>
+	</div>
+	<div class="grid-x">
+		<div class="cell small-6">6 cells</div>
+		<div class="cell small-6">6 cells</div>
+	</div>
+	<div class="grid-x">
+		<div class="cell medium-6 large-4">12/6/4 cells</div>
+		<div class="cell medium-6 large-8">12/6/8 cells</div>
+	</div>
+</div>
+
+<h2>Menu</h2>
+<div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+	<button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+	<div class="title-bar-title">Menu</div>
+</div>
+<div class="top-bar" id="responsive-menu">
+	<div class="top-bar-left">
+		<ul class="dropdown menu" data-dropdown-menu>
+			<li class="menu-text">Site Title</li>
+			<li class="has-submenu">
+			<a href="#0">One</a>
+			<ul class="submenu menu vertical" data-submenu>
+				<li><a href="#0">One</a></li>
+				<li><a href="#0">Two</a></li>
+				<li><a href="#0">Three</a></li>
+			</ul>
+			</li>
+			<li><a href="#0">Two</a></li>
+			<li><a href="#0">Three</a></li>
+		</ul>
+	</div>
+	<div class="top-bar-right">
+		<ul class="menu">
+			<li><input type="search" placeholder="Search"></li>
+			<li><button type="button" class="button">Search</button></li>
+		</ul>
+	</div>
+</div>
+
+<ul class="vertical menu accordion-menu" data-accordion-menu>
+	<li>
+	<a href="#">Item 1</a>
+	<ul class="menu vertical nested">
+		<li><a href="#">Item 1A</a></li>
+		<li><a href="#">Item 1B</a></li>
+	</ul>
+	</li>
+	<li><a href="#">Item 2</a></li>
+</ul>
+
+<!-- Add a Sticky Menu -->
+<div data-sticky-container>
+	<div class="top-bar" data-sticky data-margin-top="0" id="example-menu">
+		<div class="top-bar-left">
+			<ul class="menu">
+				<li class="menu-text">Site Title</li>
+			</ul>
+		</div>
+		<div class="top-bar-right">
+			<ul class="menu" data-magellan>
+				<li><a href="#first">One</a></li>
+				<li><a href="#second">Two</a></li>
+				<li><a href="#third">Three</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!-- Add content where magellan will be linked -->
+<div class="sections">
+	<section id="first" data-magellan-target="first">First Section</section>
+	<section id="second" data-magellan-target="second">Second Section</section>
+	<section id="third" data-magellan-target="third">Third Section</section>
+</div>
+
+<h2>Forms</h2>
+<div class="grid-container">
+	<form>
+		<label>Input Label
+			<input type="text" placeholder=".medium-6.cell">
+		</label>
+
+		<label>
+			How many puppies?
+			<input type="number" value="100">
+		</label>
+
+		<label>
+			What books did you read over summer break?
+			<textarea placeholder="None"></textarea>
+		</label>
+
+		<label>Select Menu
+			<select>
+				<option value="husker">Husker</option>
+				<option value="starbuck">Starbuck</option>
+				<option value="hotdog">Hot Dog</option>
+				<option value="apollo">Apollo</option>
+			</select>
+		</label>
+
+		<label>Multiple Select Menu
+			<select multiple>
+				<option value="showboat">Showboat</option>
+				<option value="redwing">Redwing</option>
+				<option value="narcho">Narcho</option>
+				<option value="hardball">Hardball</option>
+			</select>
+		</label>
+
+		<fieldset class="large-6 cell">
+			<legend>Choose Your Favorite</legend>
+			<input type="radio" name="pokemon" value="Red" id="pokemonRed" required><label for="pokemonRed">Red</label>
+			<input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
+			<input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Yellow</label>
+		</fieldset>
+
+		<fieldset class="large-6 cell">
+			<legend>Check these out</legend>
+			<input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+			<input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+			<input id="checkbox3" type="checkbox"><label for="checkbox3">Checkbox 3</label>
+		</fieldset>
+
+		<fieldset class="fieldset">
+			<legend>Check these out</legend>
+			<input id="checkbox12" type="checkbox"><label for="checkbox12">Checkbox 1</label>
+			<input id="checkbox22" type="checkbox"><label for="checkbox22">Checkbox 2</label>
+		</fieldset>
+
+		<label>Password
+			<input type="password" aria-describedby="passwordHelpText">
+		</label>
+		<p class="help-text" id="passwordHelpText">Your password must have at least 10 characters, a number, and an Emoji.</p>
+
+		<div class="grid-x grid-padding-x">
+			<div class="small-3 cell">
+				<label for="middle-label" class="text-right middle">Label</label>
+			</div>
+			<div class="small-9 cell">
+				<input type="text" id="middle-label" placeholder="Right- and middle-aligned text input">
+			</div>
+		</div>
+
+		<div class="input-group">
+			<span class="input-group-label">$</span>
+			<input class="input-group-field" type="number">
+			<div class="input-group-button">
+				<input type="button" class="button" value="Submit">
+			</div>
+		</div>
+
+		<label for="exampleFileUpload" class="button">Upload File</label>
+		<input type="file" id="exampleFileUpload" class="show-for-sr">
+
+		<label id="ageLabel">Age</label>
+		<div class="slider" aria-labelledby="ageLabel" aria-describedby="ageHelpText" data-slider data-initial-start='50' data-end='200'>
+			<span class="slider-handle"  data-slider-handle role="slider" tabindex="1"></span>
+			<span class="slider-fill" data-slider-fill></span>
+			<input type="hidden">
+		</div>
+		<p id="ageHelpText">How old are you?</p>
+
+		<div class="slider vertical" data-slider data-initial-start="25" data-end="200" data-vertical="true">
+			<span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
+			<span class="slider-fill" data-slider-fill></span>
+			<input type="hidden">
+		</div>
+
+		<div class="slider" data-slider data-initial-start="25" data-initial-end="75">
+			<span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
+			<span class="slider-fill" data-slider-fill></span>
+			<span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
+			<input type="hidden">
+			<input type="hidden">
+		</div>
+
+		<div class="grid-x grid-padding-x">
+			<div class="large-10 small-10 cell columns">
+				<div class="slider" data-slider data-initial-start="50">
+					<span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput1"></span>
+					<span class="slider-fill" data-slider-fill></span>
+				</div>
+			</div>
+			<div class="large-2 small-2 cell columns">
+				<input type="number" id="sliderOutput1">
+			</div>
+		</div>
+		<br/>
+
+		<button type="button" class="button radius primary">Primary</button>
+		<button type="button" class="button rounded shadow secondary">Secondary</button>
+		<button type="button" class="button radius bordered shadow success">Success</button>
+		<button type="button" class="button rounded bordered shadow alert">Alert</button>
+		<button type="button" class="button radius bordered shadow warning">Warning</button>
+		<a class="button disabled" href="#" aria-disabled>Disabled</a>
+		<br/>
+		<button class="hollow button" href="#">Primary</button>
+		<button class="hollow button secondary" href="#">Secondary</button>
+		<button class="hollow button success" href="#">Success</button>
+		<button class="hollow button alert" href="#">Alert</button>
+		<button class="hollow button warning" href="#">Warning</button>
+		<button class="hollow button" href="#" disabled>Disabled</button>
+		<br/>
+		<a class="button tiny" href="#">So Tiny</a>
+		<a class="button small" href="#">So Small</a>
+		<a class="button" href="#">So Basic</a>
+		<a class="button large" href="#">So Large</a>
+		<a class="button expanded" href="#">Such Expand</a>
+		<a class="button small expanded" href="#">Wow, Small Expand</a>
+	</form>
+
+	<h2>Switch</h2>
+	<div class="switch tiny">
+		<input class="switch-input" id="tinySwitch" type="checkbox" name="exampleSwitch">
+		<label class="switch-paddle" for="tinySwitch">
+			<span class="show-for-sr">Tiny Sandwiches Enabled</span>
+		</label>
+	</div>
+	<div class="switch small">
+		<input class="switch-input" id="smallSwitch" type="checkbox" name="exampleSwitch">
+		<label class="switch-paddle" for="smallSwitch">
+			<span class="show-for-sr">Small Portions Only</span>
+		</label>
+	</div>
+	<div class="switch large">
+		<input class="switch-input" id="largeSwitch" type="checkbox" name="exampleSwitch">
+		<label class="switch-paddle" for="largeSwitch">
+			<span class="show-for-sr">Show Large Elephants</span>
+		</label>
+	</div>
+
+	<div class="switch">
+		<input class="switch-input" id="exampleRadioSwitch1" type="radio" checked name="testGroup">
+		<label class="switch-paddle" for="exampleRadioSwitch1">
+			<span class="show-for-sr">Bulbasaur</span>
+		</label>
+	</div>
+	<div class="switch">
+		<input class="switch-input" id="exampleRadioSwitch2" type="radio" checked name="testGroup">
+		<label class="switch-paddle" for="exampleRadioSwitch2">
+			<span class="show-for-sr">Bulbasaur</span>
+		</label>
+	</div>
+
+	<p>Do you like me?</p>
+	<div class="switch large">
+		<input class="switch-input" id="yes-no" type="checkbox" name="exampleSwitch">
+		<label class="switch-paddle" for="yes-no">
+			<span class="show-for-sr">Do you like me?</span>
+			<span class="switch-active" aria-hidden="true">Yes</span>
+			<span class="switch-inactive" aria-hidden="true">No</span>
+		</label>
+	</div>
+
+	
+
+	<h2>Card</h2>
+	<div class="grid-x">
+		<div class="large-3 cell">
+			<div class="radius bordered shadow card">
+				<img src="https://placehold.it/500x250">
+				<div class="card-divider">
+					Styled Card
+				</div>
+				<div class="card-section">
+					<h4>This is a card.</h4>
+					<p>It has an easy to override visual style, and is appropriately subdued.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<h2>Table</h2>
+	<table class="radius bordered shadow">
+		<thead>
+			<tr>
+				<th width="200">Table Header</th>
+				<th>Table Header</th>
+				<th width="150">Table Header</th>
+				<th width="150">Table Header</th>
+			</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>Content Goes Here</td>
+			<td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+			<td>Content Goes Here</td>
+			<td>Content Goes Here</td>
+		</tr>
+		<tr>
+			<td>Content Goes Here</td>
+			<td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+			<td>Content Goes Here</td>
+			<td>Content Goes Here</td>
+		</tr>
+		</tbody>
+	</table>
+
+	<h2>Image</h2>
+	<img src="https://placehold.it/150x150" class="radius">
+
+	<div class="arrow-down"></div>
+	<div class="arrow-up"></div>
+	<div class="arrow-right"></div>
+	<div class="arrow-left"></div>
+
+	<h2>Font</h2>
+	<p class="font-wide">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+	<p class="font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	<p class="font-bold">Perspiciatis tempore cumque, magni aspernatur, quidem. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+	<p class="font-italic">Lorem minus, placeat, cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.iure voluptas aliquam tempora neque?</p>
+
+	<a href="#" class="text-hide">
+		  <img src="https://placehold.it/100x30" alt="zurb logo">
+		    Zurb <!-- Logo Text  -->
+	</a>
+
+	<h2>Pagination</h2>
+	<nav aria-label="Pagination">
+		<ul class="pagination text-center">
+			<li class="pagination-previous disabled">Previous</li>
+			<li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+			<li><a href="#" aria-label="Page 2">2</a></li>
+			<li><a href="#" aria-label="Page 3">3</a></li>
+			<li><a href="#" aria-label="Page 4">4</a></li>
+			<li class="ellipsis"></li>
+			<li><a href="#" aria-label="Page 12">12</a></li>
+			<li><a href="#" aria-label="Page 13">13</a></li>
+			<li class="pagination-next"><a href="#" aria-label="Next page">Next</a></li>
+		</ul>
+	</nav>
+
+	<h2>Breadcrumbs</h2>
+	<nav aria-label="You are here:" role="navigation">
+		<ul class="breadcrumbs">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Features</a></li>
+			<li class="disabled">Gene Splicing</li>
+			<li>
+			<span class="show-for-sr">Current: </span> Cloning
+			</li>
+		</ul>
+	</nav>
+
+	<h2>Accordion</h2>
+	<ul class="accordion" data-accordion data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" id="deeplinked-accordion">
+		<li class="accordion-item is-active" data-accordion-item>
+		<a href="#deeplink1" class="accordion-title">Accordion 1</a>
+		<div class="accordion-content" data-tab-content id="deeplink1">
+			Panel 1. Lorem ipsum dolor
+		</div>
+		</li>
+		<li class="accordion-item" data-accordion-item>
+		<a href="#deeplink2" class="accordion-title">Accordion 2</a>
+		<div class="accordion-content" data-tab-content id="deeplink2">
+			Panel 2. Lorem ipsum dolor
+		</div>
+		</li>
+		<li class="accordion-item" data-accordion-item>
+		<a href="#deeplink3" class="accordion-title">Accordion 3</a>
+		<div class="accordion-content" data-tab-content id="deeplink3">
+			Panel 3. Lorem ipsum dolor
+		</div>
+		</li>
+	</ul>
+
+
+</div>
+
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/what-input.js"></script>
+<script src="js/vendor/foundation.min.js"></script>
+
+<script>
+$(document).ready(function() {
+		$(document).foundation();
+})
+</script>
+</body>
+</html>

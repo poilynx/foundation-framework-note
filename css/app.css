@@ -1,0 +1,13 @@
+.shadow {
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.bordered {
+	border: 0.0625rem solid #cacaca;
+}
+.rounded {
+	border-radius: 5000px !important;
+}
+.radius {
+	border-radius: 0.1875rem;
+}
